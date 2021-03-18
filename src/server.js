@@ -4,7 +4,7 @@ const { koaSwagger } = require("koa2-swagger-ui");
 const router = require("./routers/router");
 const serve = require("koa-static");
 const path = require("path");
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 const startServer = async () => {
   const app = new Koa();
@@ -18,7 +18,7 @@ const startServer = async () => {
 
   app.use(router.routes());
 
-  app.listen(port).on("listening", (ctx) => console.log(`watch docs on http://localhost:${port}/docs`));
+  app.listen(port).on("listening", (ctx) => console.log(`watch docs on port ${port}/docs`));
 };
 
 module.exports = startServer;
