@@ -2,7 +2,8 @@
   "name": "trevell_app_rs_back",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js"
+    "start": "node index.js",
+	"dev": "nodemon index.js"
   },
   "dependencies": {
     "@koa/cors": "^3.1.0",
